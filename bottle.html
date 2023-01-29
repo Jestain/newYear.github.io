@@ -19,10 +19,11 @@
 <body >
     <script type="text/javascript">
         window.onload = function(){
-          var music = document.getElementById("aud"); 
+            setInterval(function(){var music = document.getElementById("aud"); 
           if (music.paused) { 
           music.paused=false;
-          music.play(); 
+          music.play(); },100)
+          
         }
         }
       </script>
