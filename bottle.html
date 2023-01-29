@@ -19,15 +19,13 @@
 <body >
     <script type="text/javascript">
         window.onload = function(){
-          setInterval("toggleSound()",1);
-        }
-       
-      function toggleSound() {
-        var music = document.getElementById("aud"); 
-        if (music.paused) { 
+          var music = document.getElementById("aud"); 
+          if (music.paused) { 
           music.paused=false;
           music.play(); 
-        }    
+        }
+       
+      
       }
       </script>
 <audio src="http://music.163.com/song/media/outer/url?id=1474400749.mp3" rel="external nofollow"  id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
