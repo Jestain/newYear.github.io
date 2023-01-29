@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>杰杰的时光漂流瓶</title>
+    
+</head>
+<style>
+    body {
+   background:url("background.jpg")  no-repeat center center;   /*加载背景图*/   /* 背景图不平铺 */
+   background-size:cover;  /* 让背景图基于容器大小伸缩 */
+   background-attachment:fixed;        /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */   
+   background-color:#CCCCCC;   /* 设置背景颜色，背景图加载过程中会显示背景色 */
+    }
+    audio{
+  display: none;
+}
+</style>
+<body >
+    <script type="text/javascript">
+        window.onload = function(){
+          setInterval("toggleSound()",1);
+        }
+       
+      function toggleSound() {
+        var music = document.getElementById("aud"); 
+        if (music.paused) { 
+          music.paused=false;
+          music.play(); 
+        }    
+      }
+      </script>
+<audio src="backmusic2.mp3" rel="external nofollow"  id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
+
+<div id="text" style="font-size: 2rem;">
+
+</div>
+</body>
+<script>
+  let divTyping = document.getElementById('text')
+  let i = 0,
+    timer = 0,
+    str = '如果有缘，或者说命中注定，<br>如果4年后你读大学，不嫌我老，<br>那时你若不是名花有主，我也不是心有所属，<br>38万8我绝对不会犹豫。<br><br> 如果有缘无份，也不要紧，得一红颜知己我心足矣，<br>大伯对你妈妈有多好，我就对你有多好，我一直想有一个妹妹呢。<br><br>未来可期，你努力学习，我努力赚钱，将来如何，我们拭目以待！<br><br>2023年1月29日'
+
+  function typing () {
+    if (i <= str.length) {
+      divTyping.innerHTML = str.slice(0, i++) + '_'
+      timer = setTimeout(typing, 200)
+    }
+    else {
+      divTyping.innerHTML = str//结束打字,移除 _ 光标
+      clearTimeout(timer)
+    }
+  }
+
+  typing()
+</script>
+</html>
+
