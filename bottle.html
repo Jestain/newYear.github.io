@@ -18,27 +18,18 @@
 </style>
 <body >
     <script type="text/javascript">
-        window.onload =function(){
-            setTimeout(() => {
-        (function () {
-        var audio = document.querySelector('#audio');
-        function PlayAudio() {
-        audio.load(); 
-        audio.play(); 
+        window.onload = function(){
+          var music = document.getElementById("aud"); 
+          if (music.paused) { 
+          music.paused=false;
+          music.play(); 
         }
-        audio.addEventListener('play', function () {
-        window.removeEventListener('touchstart', PlayAudio, false);
-        }, false);
-        window.addEventListener('touchstart', PlayAudio, false);
-        })();
-        }, 500)
-        let user = window.localStorage.getItem('ethelWxUserInfo')
-        if (!user || user == undefined || user == 'undefined') {
-        window.localStorage.removeItem('ethelWxUserInfo')
-        }
-        }
+       
+      
+      }
       </script>
-<audio src="http://music.163.com/song/media/outer/url?id=1474400749.mp3" autoplay="autoplay" loop="" audio/>
+<audio src="http://music.163.com/song/media/outer/url?id=1474400749.mp3" rel="external nofollow"  id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
+
     
 <div id="text" style="font-size: 2rem;">
 
