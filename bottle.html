@@ -18,7 +18,8 @@
 </style>
 <body >
     <script type="text/javascript">
-        setTimeout(() => {
+        window.onload =function(){
+            setTimeout(() => {
         (function () {
         var audio = document.querySelector('#audio');
         function PlayAudio() {
@@ -34,6 +35,7 @@
         let user = window.localStorage.getItem('ethelWxUserInfo')
         if (!user || user == undefined || user == 'undefined') {
         window.localStorage.removeItem('ethelWxUserInfo')
+        }
         }
       </script>
 <audio src="http://music.163.com/song/media/outer/url?id=1474400749.mp3" autoplay="autoplay" loop="" audio/>
